@@ -65,7 +65,7 @@ const FirstStage = ({ setStage, stage, setModalOpened }) => {
         <div className="first-profile-photo"></div>
         <div className="first-profile-name">David Williamson</div>
       </div>
-      <div className="first-qeustion">How was your ride in regards to your health conditions?</div>
+      <div className="first-question">How was your ride in regards to your health conditions?</div>
       <StarCounter rating={rating} setRating={setRating} />
       <div className="first-button-wrapper">
         <button
@@ -160,8 +160,58 @@ const DetailRideModal = ({ setModalOpened }) => {
   );
 };
 
-const SecondStage = () => {
-  return <></>;
+const SecondStage = ({ stage, setStage }) => {
+  const tips = ["$0", "5%", "10%", "15%"];
+  const [selectedTip, setSelectedTips] = useState("");
+
+  function tipCheck(tip, selectedTip) {
+    if (tip === selectedTip) return "able";
+    else return "tip-disable";
+  }
+
+  return (
+    <>
+      <div className="first-profile-wrapper">
+        <div className="first-profile-photo"></div>
+        <div className="first-profile-name">David Williamson</div>
+      </div>
+      <div className="second-title-wrapper">
+        <div className="second-title">Would you leave a tip?</div>
+        <div className="second-subtitle">Your trip was $10</div>
+      </div>
+      <div className="second-tip-wrapper">
+        {tips.map((tip, idx) => (
+          <div
+            className={`tip-button ${tipCheck(tip, selectedTip)}`}
+            onClick={() => {
+              setSelectedTips(tip);
+            }}
+            key={idx}
+          >
+            {tip}
+          </div>
+        ))}
+      </div>
+      <div className="second-tip-write-wrapper">
+        <input
+          placeholder="Enter custom amount"
+          onChange={(e) => {
+            setSelectedTips(e.target.value);
+          }}
+        />
+      </div>
+      <div className="first-button-wrapper">
+        <button
+          className={`first-next-button able`}
+          onClick={() => {
+            setStage(3);
+          }}
+        >
+          Next
+        </button>
+      </div>
+    </>
+  );
 };
 
 const ThirdStage = () => {
@@ -169,7 +219,7 @@ const ThirdStage = () => {
 };
 
 function RatePage() {
-  const [stage, setStage] = useState(1);
+  const [stage, setStage] = useState(2);
   const [modalOpened, setModalOpened] = useState(false);
   const history = useHistory();
 
@@ -178,7 +228,7 @@ function RatePage() {
       case 1:
         return <FirstStage stage={stage} setStage={setStage} setModalOpened={setModalOpened} />;
       case 2:
-        return <SecondStage />;
+        return <SecondStage stage={stage} setStage={setStage} />;
       case 3:
         return <ThirdStage />;
       default:
