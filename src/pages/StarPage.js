@@ -68,43 +68,12 @@ const StarCounter = ({ setStage }) => {
   );
 };
 
-const StarRatePage = ({ setStage }) => {
-  return (
-    <>
-      <div className="avartar"></div>
-      <div className="question">How was your ride?</div>
-      <div className="driver-info1">Today at 3pm</div>
-      <div className="driver-info2">Driver #5625</div>
-      <div className="star-counter-wrapper">
-        <StarCounter setStage={setStage} />
-      </div>
-    </>
-  );
-};
-
-const DetailedRatePage = ({ setStages }) => {
-  return (
-    <>
-      <div className="detailed-question">How was your ride?</div>
-      <div className="detailed-question"></div>
-    </>
-  );
-};
-
 function StarPage() {
-  const [stage, setStage] = useState(1);
-
-  const getPage = (stage, setStage) => {
-    switch (stage) {
-      case 3:
-        return <></>;
-      case 2:
-        return <DetailedRatePage setStage={setStage} />;
-      case 1:
-        return <StarRatePage setStage={setStage} />;
-    }
-  };
-  return <div className="star-page-wrapper">{getPage(stage, setStage)}</div>;
+  return (
+    <div className="star-page-wrapper">
+      <div className="popup-card"></div>
+    </div>
+  );
 }
 
 export default StarPage;
