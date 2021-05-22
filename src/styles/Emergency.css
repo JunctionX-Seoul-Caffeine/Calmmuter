@@ -1,0 +1,77 @@
+.modal-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #a2a4aa;
+}
+
+.emergency-modal {
+  position: absolute;
+  width: 335px;
+  height: 352px;
+  left: 20px;
+  top: 230px;
+  background: #ffffff;
+  box-shadow: 0px 24px 32px rgba(50, 50, 71, 0.02);
+  border-radius: 16px;
+}
+
+.emergency-modal svg:first-child {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.emergency-icon {
+  position: absolute;
+  left: 43.47%;
+  right: 43.2%;
+  top: 15.98%;
+  bottom: 58.99%;
+}
+
+.emergency-modal h4 {
+  position: absolute;
+  width: 142px;
+  height: 22px;
+  left: 98px;
+  top: 105px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  color: #333333;
+}
+
+.emergency-modal div:nth-child(4) {
+  position: absolute;
+  width: 295px;
+  height: 69px;
+  left: 20px;
+  top: 170px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  color: #333333;
+}
+
+.emergency-modal div:nth-child(5) {
+  position: absolute;
+  width: 295px;
+  height: 53px;
+  left: 20px;
+  top: 260px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #767cea;
+}

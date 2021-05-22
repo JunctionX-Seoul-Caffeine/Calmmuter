@@ -9,6 +9,7 @@ import StartPage from "./pages/StartPage";
 import AskBodyInfoPage from "./pages/AskBodyInfoPage";
 import BasicInfo from "./pages/BasicInfo";
 import CompleteRegistrationPage from "./pages/CompleteRegistrationPage";
+import Emergency from "./pages/Emergency";
 
 function App() {
   return (
@@ -21,7 +22,12 @@ function App() {
         <Route path="/" component={StartPage} exact />
         <Route path="/ask-body-info" component={AskBodyInfoPage} exact />
         <Route path="/basic-info" component={BasicInfo} exact />
-        <Route path="/complete-registration" component={CompleteRegistrationPage} exact />
+        <Route
+          path="/complete-registration"
+          component={CompleteRegistrationPage}
+          exact
+        />
+        <Route path="/emergency" component={Emergency} exact />
       </div>
     </div>
   );
