@@ -29,10 +29,6 @@
   justify-content: center;
 }
 
-svg:first-child {
-  margin: 0px;
-}
-
 .first-profile-wrapper {
   width: 100%;
   height: 156px;
