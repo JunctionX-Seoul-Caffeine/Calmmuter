@@ -39,7 +39,7 @@ const Stars = ({ index, rating, hoverRating, onMouseEnter, onMouseLeave, onSaveR
   );
 };
 
-const StarCounter = () => {
+const StarCounter = ({ setIsRated }) => {
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
 
@@ -52,6 +52,10 @@ const StarCounter = () => {
   // 마우스가 별 밖으로 나가면 스테이트를 0으로 변경.
   const onSaveRating = (index) => setRating(index);
   // 클릭시, 별 인덱스를 스테이트에 저장.
+
+  const onClcikHandler = () => {
+    
+  }
 
   return (
     <>
@@ -74,7 +78,7 @@ function StarPage() {
       <div className="driver-info1">Today at 3pm</div>
       <div className="driver-info2">Driver #5625</div>
       <div className="star-counter-wrapper">
-        <StarCounter />
+        <StarCounter setIsRated={setIsRated} />
       </div>
     </div>
   );

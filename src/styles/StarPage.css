@@ -17,12 +17,12 @@
 
 .question {
   position: absolute;
-  width: 195px;
+  width: fit-content;
   height: 26px;
   left: 90px;
   top: 334px;
 
-  font-family: SF Pro Display;
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 22px;
@@ -43,7 +43,7 @@
   left: 68px;
   top: 386px;
 
-  font-family: SF Pro Display;
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -63,7 +63,7 @@
   left: 233px;
   top: 386px;
 
-  font-family: SF Pro Display;
+  font-family: sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
