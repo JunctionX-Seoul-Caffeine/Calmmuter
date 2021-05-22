@@ -53,6 +53,12 @@ const StarCounter = ({ rating, setRating }) => {
 
 const FirstStage = ({ setStage }) => {
   const [rating, setRating] = useState(0);
+
+  function getButtonClass(raing) {
+    if (rating === 0) {
+      return "disable";
+    } else return "able";
+  }
   return (
     <>
       <div className="first-profile-wrapper">
@@ -63,7 +69,7 @@ const FirstStage = ({ setStage }) => {
       <StarCounter rating={rating} setRating={setRating} />
       <div className="first-button-wrapper">
         <button className="first-detail-button-ride">Tell us more about the ride</button>
-        <button className="first-next-button">Next</button>
+        <button className={`first-next-button ${getButtonClass(rating)}`}>Next</button>
       </div>
     </>
   );
