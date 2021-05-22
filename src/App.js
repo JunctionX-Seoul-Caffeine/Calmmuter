@@ -12,7 +12,7 @@ function App() {
       <div className="wrapper">
         <Route path="/rate" component={RatePage} exact />
         <Route path="/body-info" component={BodyInfo} exact />
-        <Route path="/priotiry" component={Priority} exact />
+        <Route path="/priority" component={Priority} exact />
       </div>
     </div>
   );

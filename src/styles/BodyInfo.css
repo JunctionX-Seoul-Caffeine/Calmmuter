@@ -1,6 +1,6 @@
 .body-info-wrapper {
   width: 100%;
-  height: 100%;
+  height: calc(100% - 44px);
   display: flex;
   flex-direction: column;
 }
@@ -52,7 +52,7 @@
 
 .body-info-element-wrapper {
   width: 91%;
-  height: 67%;
+  height: 75%;
   margin: 12px auto 0;
   display: flex;
   justify-content: space-between;
@@ -89,7 +89,7 @@
   cursor: pointer;
 }
 
-.test {
+.selected-mark {
   position: absolute;
   top: 10px;
   left: 90px;
@@ -109,6 +109,9 @@
   height: 48px;
   outline: none;
   border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button-wrapper button:first-child {
