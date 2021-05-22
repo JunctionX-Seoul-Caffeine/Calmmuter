@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import "../styles/RatePage.css";
 
@@ -89,10 +89,73 @@ const FirstStage = ({ setStage, stage, setModalOpened }) => {
   );
 };
 
-const DetailRideModal = () => {
+const ToggleForm = ({ idx, value, setList, list }) => {
   return (
-    <div>
-      <div></div>
+    <div className="modal-toggle-form">
+      <div className="modal-toggle-form-label">{value}</div>
+      <div className="modal-toggle-switch">
+        <div className="toggle-button-cover">
+          <div className="button-cover">
+            <div className="button b2" id="button-10">
+              <input
+                type="checkbox"
+                className="checkbox"
+                onClick={() => {
+                  setList({ ...list, [value]: !list[value] });
+                }}
+              />
+              <div className="knobs">
+                <span>NO</span>
+              </div>
+              <div className="layer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const DetailRideModal = ({ setModalOpened }) => {
+  const values = ["Speed", "Rapid acceleration", "Hand braking", "Traffic rules", "Sharp turns", "Quick lane Changes"];
+  const initialList = {
+    Speed: false,
+    "Rapid acceleration": false,
+    "Hand braking": false,
+    "Traffic rules": false,
+    "Sharp turns": false,
+    "Quick lane Changes": false,
+  };
+  const [list, setList] = useState(initialList);
+
+  return (
+    <div className="modal-wrapper">
+      <div
+        className="close-button-wrapper"
+        onClick={() => {
+          setModalOpened(false);
+        }}
+      >
+        <CloseIcon />
+      </div>
+      <div className="modal-title">Tell us more about the ride.</div>
+      <div className="modal-subtitle">How did you feel about each categories in regards to your health condition?</div>
+      <div className="modal-toggle-form-wrapper">
+        {values.map((value, idx) => (
+          <ToggleForm idx={idx} value={value} setList={setList} key={idx} list={list} />
+        ))}
+      </div>
+      <div className="button-wrapper">
+        <button id="modal-cancel-button">Cancel</button>
+        <button
+          id="modal-okay-button"
+          onClick={() => {
+            setModalOpened(false);
+          }}
+        >
+          Okay
+        </button>
+      </div>
     </div>
   );
 };
@@ -136,8 +199,8 @@ function RatePage() {
           </div>
         )}
         {getContentByState(stage, setStage, setModalOpened)}
-        {modalOpened && <DetailRideModal />}
       </div>
+      {modalOpened && <DetailRideModal setModalOpened={setModalOpened} />}
     </div>
   );
 }
