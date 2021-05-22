@@ -54,7 +54,7 @@ const BodyInfo = () => {
     },
   ]);
 
-  const onClick = ({ id, src }) => {
+  const onClick = ({ id }) => {
     setBodyInfoArr(
       bodyInfoArr.map((singleInfo) =>
         singleInfo.id === id
@@ -62,7 +62,6 @@ const BodyInfo = () => {
           : singleInfo
       )
     );
-    console.log(src);
   };
 
   return (

@@ -7,6 +7,7 @@ import MainPage from "./pages/MainPage";
 import Priority from "./pages/Priority";
 import StartPage from "./pages/StartPage";
 import AskBodyInfoPage from "./pages/AskBodyInfoPage";
+import BasicInfo from "./pages/BasicInfo";
 import CompleteRegistrationPage from "./pages/CompleteRegistrationPage";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/priority" component={Priority} exact />
         <Route path="/" component={StartPage} exact />
         <Route path="/ask-body-info" component={AskBodyInfoPage} exact />
+        <Route path="/basic-info" component={BasicInfo} exact />
         <Route path="/complete-registration" component={CompleteRegistrationPage} exact />
       </div>
     </div>

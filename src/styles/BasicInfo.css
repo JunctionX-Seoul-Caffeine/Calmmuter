@@ -1,0 +1,133 @@
+.basic-info-body-wrapper {
+  width: 100%;
+  height: calc(100% - 44px);
+  display: flex;
+  flex-direction: column;
+}
+
+.basic-info-current-step {
+  width: 111.67px;
+  height: 6px;
+  background: #767cea;
+  border-radius: 8px;
+}
+
+.basic-info-inputs-wrapper {
+  width: 100%;
+  height: 83%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.basic-info-name-wrapper {
+  width: 91%;
+  height: 20%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+}
+
+.basic-info-name-wrapper h3 {
+  margin-top: 10px;
+}
+
+.basic-info-name-wrapper input {
+  background: #f3f5f7;
+  border-radius: 12px;
+  width: 95%;
+  height: 40%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #a2a4aa;
+  border: 0;
+  outline: none;
+  padding-left: 15px;
+}
+
+.basic-info-age-wrapper {
+  width: 91%;
+  height: 20%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+}
+
+.basic-info-age-wrapper h3 {
+  margin-top: 10px;
+}
+
+.basic-info-age-wrapper input {
+  background: #f3f5f7;
+  border-radius: 12px;
+  width: 95%;
+  height: 40%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #a2a4aa;
+  border: 0;
+  outline: none;
+  padding-left: 15px;
+}
+
+.basic-info-gender-wrapper {
+  width: 91%;
+  height: 20%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  color: #333333;
+}
+
+.basic-info-gender-wrapper h3 {
+  margin-top: 10px;
+}
+
+.gender-button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.basic-info-gender-wrapper button {
+  width: 163px;
+  height: 48px;
+  outline: none;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.basic-info-gender-wrapper .gender-unselected {
+  background: #f3f5f7;
+  border: 1px solid #e3e6ea;
+  box-sizing: border-box;
+  border-radius: 8px;
+  color: #646b71;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.basic-info-gender-wrapper .gender-selected {
+  background: #767cea;
+  border-radius: 8px;
+  outline: none;
+  border: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+}
