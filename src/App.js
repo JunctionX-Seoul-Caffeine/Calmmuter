@@ -5,6 +5,7 @@ import BodyInfo from "./pages/BodyInfo";
 import RatePage from "./pages/RatePage";
 import MainPage from "./pages/MainPage";
 import Priority from "./pages/Priority";
+import StartPage from "./pages/StartPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/rate" component={RatePage} exact />
         <Route path="/body-info" component={BodyInfo} exact />
         <Route path="/priority" component={Priority} exact />
+        <Route path="/" component={StartPage} exact />
       </div>
     </div>
   );
