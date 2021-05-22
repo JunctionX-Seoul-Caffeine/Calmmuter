@@ -9,7 +9,6 @@ import StartPage from "./pages/StartPage";
 import AskBodyInfoPage from "./pages/AskBodyInfoPage";
 import CompleteRegistrationPage from "./pages/CompleteRegistrationPage";
 
-
 function App() {
   return (
     <div className="App">

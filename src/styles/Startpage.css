@@ -36,21 +36,18 @@
 .start-page-start-button button {
   width: 100%;
   height: 48px;
-  outline: none;
   border: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-
   background: #ffffff;
   border-radius: 8px;
   outline: none;
-  border: 0;
-
   color: #767cea;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
+  cursor: pointer;
 }
