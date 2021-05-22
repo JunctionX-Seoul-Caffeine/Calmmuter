@@ -1,5 +1,120 @@
 import React, { useState, useMemo } from "react";
+import { useHistory } from "react-router-dom";
 import "../styles/RatePage.css";
+
+const Stars = ({ index, rating, hoverRating, onMouseEnter, onMouseLeave, onSaveRating }) => {
+  const fillColor = useMemo(() => {
+    if (hoverRating >= index) {
+      return " #767CEA"; // #ffdb58 === 노란색
+    } else if (!hoverRating && rating >= index) {
+      return " #767CEA"; // #ffdb58 === 노란색
+    }
+    return "#FFFFFF"; // #dcdcdc === 회색
+  }, [rating, hoverRating, index]);
+
+  return (
+    <div onMouseEnter={() => onMouseEnter(index)} onMouseLeave={() => onMouseLeave()} onClick={() => onSaveRating(index)}>
+      <StarIcon fill={fillColor} />
+    </div>
+  );
+};
+
+const StarCounter = ({ rating, setRating }) => {
+  const rateStr = [" ", "Very Bad", "Bad", "Normal", "Good", "Very Good"];
+
+  const [hoverRating, setHoverRating] = useState(0);
+
+  const onMouseEnter = (index) => setHoverRating(index);
+  // 마우스가 별 위에 올라가면 스테이트를 변경.
+  const onMouseLeave = () => setHoverRating(0);
+  // 마우스가 별 밖으로 나가면 스테이트를 0으로 변경.
+  const onSaveRating = (index) => setRating(index);
+  // 클릭시, 별 인덱스를 스테이트에 저장.
+
+  function getRateStr(rating, hoverRating) {
+    if (hoverRating === 0) {
+      return rateStr[rating];
+    } else {
+      return rateStr[hoverRating];
+    }
+  }
+
+  return (
+    <div className="star-counter-wrapper">
+      <div className="star-counter">
+        {[1, 2, 3, 4, 5].map((idx) => {
+          return <Stars index={idx} rating={rating} hoverRating={hoverRating} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} onSaveRating={onSaveRating} />;
+        })}
+      </div>
+      <div className="star-counter-str">{getRateStr(rating, hoverRating)}</div>
+    </div>
+  );
+};
+
+const FirstStage = ({ setStage }) => {
+  const [rating, setRating] = useState(0);
+  return (
+    <>
+      <div className="first-profile-wrapper">
+        <div className="first-profile-photo"></div>
+        <div className="first-profile-name">David Williamson</div>
+      </div>
+      <div className="first-qeustion">How was your ride in regards to your health conditions?</div>
+      <StarCounter rating={rating} setRating={setRating} />
+      <div className="first-button-wrapper">
+        <button className="first-detail-button-ride">Tell us more about the ride</button>
+        <button className="first-next-button">Next</button>
+      </div>
+    </>
+  );
+};
+
+const DetailRideModal = () => {};
+
+const SecondStage = () => {
+  return <></>;
+};
+
+const ThirdStage = () => {
+  return <></>;
+};
+
+function RatePage() {
+  const [stage, setStage] = useState(1);
+  const history = useHistory();
+
+  function getContentByState(stage, setStage) {
+    switch (stage) {
+      case 1:
+        return <FirstStage />;
+      case 2:
+        return <SecondStage />;
+      case 3:
+        return <ThirdStage />;
+      default:
+        return <></>;
+    }
+  }
+  return (
+    <div className="rate-page-wrapper">
+      <div className="pop-up-card">
+        <div
+          className="close-button-wrapper"
+          onClick={() => {
+            history.push("/");
+          }}
+        >
+          <CloseIcon />
+        </div>
+        {getContentByState(stage, setStage)}
+      </div>
+    </div>
+  );
+}
+
+export default RatePage;
+
+//팝업 닫거나 평가 끝나면 메인페이지로
 
 const CloseIcon = () => {
   return (
@@ -21,46 +136,3 @@ const StarIcon = ({ fill = "none" }) => {
     </svg>
   );
 };
-
-const FirstStage = () => {
-  return <></>;
-};
-
-const SecondStage = () => {
-  return <></>;
-};
-
-const ThirdStage = () => {
-  return <></>;
-};
-
-function RatePage() {
-  const [stage, setStage] = useState(1);
-
-  function getContentByState(stage, setStage) {
-    switch (stage) {
-      case 1:
-        return <FirstStage />;
-      case 2:
-        return <SecondStage />;
-      case 3:
-        return <ThirdStage />;
-      default:
-        return <></>;
-    }
-  }
-  return (
-    <div className="rate-page-wrapper">
-      <div className="pop-up-card">
-        <div className="close-button-wrapper">
-          <CloseIcon />
-        </div>
-        {getContentByState(stage, setStage)}
-      </div>
-    </div>
-  );
-}
-
-export default RatePage;
-
-//팝업 닫거나 평가 끝나면 메인페이지로
