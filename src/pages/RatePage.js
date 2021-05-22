@@ -51,7 +51,7 @@ const StarCounter = ({ rating, setRating }) => {
   );
 };
 
-const FirstStage = ({ setStage }) => {
+const FirstStage = ({ setStage, stage, setModalOpened }) => {
   const [rating, setRating] = useState(0);
 
   function getButtonClass(raing) {
@@ -68,14 +68,34 @@ const FirstStage = ({ setStage }) => {
       <div className="first-qeustion">How was your ride in regards to your health conditions?</div>
       <StarCounter rating={rating} setRating={setRating} />
       <div className="first-button-wrapper">
-        <button className="first-detail-button-ride">Tell us more about the ride</button>
-        <button className={`first-next-button ${getButtonClass(rating)}`}>Next</button>
+        <button
+          className="first-detail-button-ride"
+          onClick={() => {
+            setModalOpened(true);
+          }}
+        >
+          Tell us more about the ride
+        </button>
+        <button
+          className={`first-next-button ${getButtonClass(rating)}`}
+          onClick={() => {
+            if (stage !== 0) setStage(2);
+          }}
+        >
+          Next
+        </button>
       </div>
     </>
   );
 };
 
-const DetailRideModal = () => {};
+const DetailRideModal = () => {
+  return (
+    <div>
+      <div></div>
+    </div>
+  );
+};
 
 const SecondStage = () => {
   return <></>;
@@ -87,12 +107,13 @@ const ThirdStage = () => {
 
 function RatePage() {
   const [stage, setStage] = useState(1);
+  const [modalOpened, setModalOpened] = useState(false);
   const history = useHistory();
 
-  function getContentByState(stage, setStage) {
+  function getContentByState(stage, setStage, setModalOpened) {
     switch (stage) {
       case 1:
-        return <FirstStage />;
+        return <FirstStage stage={stage} setStage={setStage} setModalOpened={setModalOpened} />;
       case 2:
         return <SecondStage />;
       case 3:
@@ -104,15 +125,18 @@ function RatePage() {
   return (
     <div className="rate-page-wrapper">
       <div className="pop-up-card">
-        <div
-          className="close-button-wrapper"
-          onClick={() => {
-            history.push("/");
-          }}
-        >
-          <CloseIcon />
-        </div>
-        {getContentByState(stage, setStage)}
+        {stage !== 3 && (
+          <div
+            className="close-button-wrapper"
+            onClick={() => {
+              history.push("/main");
+            }}
+          >
+            <CloseIcon />
+          </div>
+        )}
+        {getContentByState(stage, setStage, setModalOpened)}
+        {modalOpened && <DetailRideModal />}
       </div>
     </div>
   );
