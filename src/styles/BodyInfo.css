@@ -7,18 +7,120 @@
 
 .step-wrapper {
   width: 100%;
-  height: 5%;
+  height: 7%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .step-bar {
-  /* position: absolute; */
   width: 335px;
   height: 6px;
-  /* left: 20px; */
-  /* top: 78px; */
   background-color: #e3e6ea;
   border-radius: 8px;
+}
+
+.current-step {
+  width: 223.33px;
+  height: 6px;
+  background: #767cea;
+  border-radius: 8px;
+}
+
+.title-wrapper {
+  margin-bottom: 2px;
+}
+
+.title-wrapper h3 {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  margin: 0 0 0 22px;
+}
+
+.title-wrapper h4 {
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #646b71;
+  margin: 5px 0 0 20px;
+}
+
+.body-info-element-wrapper {
+  width: 91%;
+  height: 67%;
+  margin: 12px auto 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.single-body-info-selected {
+  position: relative;
+  width: 163px;
+  height: 146px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  margin: 7px 0;
+  cursor: pointer;
+  background-color: rgba(118, 124, 234, 0.12);
+  border: 1.5px solid #767cea;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+.single-body-info {
+  width: 163px;
+  height: 126px;
+  border-radius: 12px;
+  background-color: #f3f5f7;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  margin: 7px 0;
+  cursor: pointer;
+}
+
+.test {
+  position: absolute;
+  top: 10px;
+  left: 90px;
+}
+
+.button-wrapper {
+  width: 91%;
+  height: 13%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-wrapper button {
+  width: 163px;
+  height: 48px;
+  outline: none;
+  border: 0;
+}
+
+.button-wrapper button:first-child {
+  background: #f3f5f7;
+  border: 1px solid #e3e6ea;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.button-wrapper button:nth-last-child(1) {
+  background: #767cea;
+  border-radius: 8px;
+  outline: none;
+  border: 0;
 }

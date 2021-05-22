@@ -5,6 +5,7 @@ const StatusBar = () => {
   return (
     <div className="status-bar-wrapper">
       <svg
+        className="status-bar-svg1"
         width="27"
         height="12"
         viewBox="0 0 27 12"

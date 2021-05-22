@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <div className="wrapper">
         <Route path="/rate" component={RatePage} exact />
+        <Route path="/body-info" component={BodyInfo} exact />
       </div>
     </div>
   );
