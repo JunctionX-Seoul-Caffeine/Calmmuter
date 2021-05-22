@@ -8,7 +8,6 @@ import Priority from "./pages/Priority";
 import StartPage from "./pages/StartPage";
 import AskBodyInfoPage from "./pages/AskBodyInfoPage";
 
-
 function App() {
   return (
     <div className="App">
