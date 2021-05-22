@@ -1,7 +1,15 @@
 import React, { useState, useMemo } from "react";
 import "../styles/RatePage.css";
 
-const StarSvg = ({ fill = "none" }) => {
+const CloseIcon = () => {
+  return (
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="#323232" />
+    </svg>
+  );
+};
+
+const StarIcon = ({ fill = "none" }) => {
   return (
     <svg width="44" height="42" viewBox="0 0 44 42" fill={fill} xmlns="http://www.w3.org/2000/svg">
       <path
@@ -14,20 +22,41 @@ const StarSvg = ({ fill = "none" }) => {
   );
 };
 
-const StarIcon = ({ fillColor }) => {
-  return (
-    <>
-      <StarSvg fill={fillColor} />
-    </>
-  );
+const FirstStage = () => {
+  return <></>;
+};
+
+const SecondStage = () => {
+  return <></>;
+};
+
+const ThirdStage = () => {
+  return <></>;
 };
 
 function RatePage() {
   const [stage, setStage] = useState(1);
 
+  function getContentByState(stage, setStage) {
+    switch (stage) {
+      case 1:
+        return <FirstStage />;
+      case 2:
+        return <SecondStage />;
+      case 3:
+        return <ThirdStage />;
+      default:
+        return <></>;
+    }
+  }
   return (
-    <div className="star-page-wrapper">
-      <div className="pop-up-card"></div>
+    <div className="rate-page-wrapper">
+      <div className="pop-up-card">
+        <div className="close-button-wrapper">
+          <CloseIcon />
+        </div>
+        {getContentByState(stage, setStage)}
+      </div>
     </div>
   );
 }
