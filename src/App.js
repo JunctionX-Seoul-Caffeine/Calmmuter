@@ -5,6 +5,7 @@ import StatusBar from "./components/StatusBar";
 import BodyInfo from "./pages/BodyInfo";
 import RatePage from "./pages/RatePage";
 import MainPage from "./pages/MainPage";
+import Priority from "./pages/Priority";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <div className="wrapper">
         <Route path="/main" component={MainPage} exact />
         <Route path="/rate" component={RatePage} exact />
+        <Route path="/body-info" component={BodyInfo} exact />
+        <Route path="/priority" component={Priority} exact />
       </div>
     </div>
   );
