@@ -24,7 +24,6 @@ const BodyInfo = () => {
           : singleInfo
       )
     );
-    console.log(bodyInfoArr);
   };
 
   return (

@@ -13,10 +13,6 @@ const Priority = () => {
     { content: "Quick lane change" },
   ]);
 
-  useEffect(() => {
-    console.log(infoArr);
-  }, [infoArr]);
-
   const dragProps = {
     onDragEnd(fromIndex, toIndex) {
       const data = infoArr;
