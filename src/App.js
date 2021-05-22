@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <div className="wrapper">
-        <StarPage />
+        <Route path="/rate" component={StarPage} exact />
       </div>
     </div>
   );
