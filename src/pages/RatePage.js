@@ -230,7 +230,7 @@ const ThirdStage = () => {
         <button
           className={`first-next-button able`}
           onClick={() => {
-            history.push("/");
+            history.push("/main");
           }}
         >
           Done
