@@ -506,3 +506,11 @@ input:focus {
 .second-tip-write-wrapper > input:nth-child(1):focus {
   color: #333;
 }
+
+.third-profile-photo {
+  width: 103px;
+  height: 103px;
+  background-image: url("../assets/end_rate.png");
+  background-position: center center;
+  background-size: 100% 100%;
+}

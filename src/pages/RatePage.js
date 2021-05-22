@@ -215,11 +215,33 @@ const SecondStage = ({ stage, setStage }) => {
 };
 
 const ThirdStage = () => {
-  return <></>;
+  const history = useHistory();
+
+  return (
+    <>
+      <div className="first-profile-wrapper">
+        <div className="third-profile-photo"></div>
+      </div>
+      <div className="second-title-wrapper">
+        <div className="second-title">Thank you for the review!</div>
+        <div className="second-subtitle">It helps us find you more relevant driver.</div>
+      </div>
+      <div className="first-button-wrapper">
+        <button
+          className={`first-next-button able`}
+          onClick={() => {
+            history.push("/");
+          }}
+        >
+          Done
+        </button>
+      </div>
+    </>
+  );
 };
 
 function RatePage() {
-  const [stage, setStage] = useState(2);
+  const [stage, setStage] = useState(1);
   const [modalOpened, setModalOpened] = useState(false);
   const history = useHistory();
 
