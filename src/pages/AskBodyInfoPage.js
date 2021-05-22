@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import StatusBar from "../components/StatusBar";
 import "../styles/AskBodyInfoPage.css";
 import "../styles/StatusBar.css";
