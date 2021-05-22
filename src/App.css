@@ -10,5 +10,6 @@
 .wrapper {
   width: 375px;
   height: 812px;
-  background-color: #e6e6e6;
+  background-color: white;
+  position: relative;
 }
