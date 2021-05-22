@@ -44,24 +44,24 @@ const StarCounter = ({ setIsRated }) => {
   const [hoverRating, setHoverRating] = useState(0);
 
   const onMouseEnter = (index) => {
-    setHoverRating(index);
-    console.log(rating);
+    if (index <= 3) setHoverRating(index);
   };
   // 마우스가 별 위에 올라가면 스테이트를 변경.
-  const onMouseLeave = () => setHoverRating(0);
+  const onMouseLeave = (index) => {
+    if (index <= 3) setHoverRating(0);
+  };
   // 마우스가 별 밖으로 나가면 스테이트를 0으로 변경.
-  const onSaveRating = (index) => setRating(index);
+  const onSaveRating = (index) => {
+    if (index <= 3) setRating(index);
+    setIsRated(true);
+  };
   // 클릭시, 별 인덱스를 스테이트에 저장.
-
-  const onClcikHandler = () => {
-    
-  }
 
   return (
     <>
       <div className="star-counter">
         {[1, 2, 3, 4, 5].map((idx) => {
-          return <Stars index={idx} rating={rating} hoverRating={hoverRating} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} onSaveRating={onSaveRating} />;
+          return <Stars index={idx} rating={rating} hoverRating={hoverRating} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} onSaveRating={onSaveRating} key={idx} />;
         })}
       </div>
     </>
@@ -69,17 +69,23 @@ const StarCounter = ({ setIsRated }) => {
 };
 
 function StarPage() {
-  const [isRated, setIsRated] = useState("");
+  const [isRated, setIsRated] = useState(false);
 
   return (
     <div className="star-page-wrapper">
-      <div className="avartar"></div>
-      <div className="question">How was your ride?</div>
-      <div className="driver-info1">Today at 3pm</div>
-      <div className="driver-info2">Driver #5625</div>
-      <div className="star-counter-wrapper">
-        <StarCounter setIsRated={setIsRated} />
-      </div>
+      {isRated ? (
+        <></>
+      ) : (
+        <>
+          <div className="avartar"></div>
+          <div className="question">How was your ride?</div>
+          <div className="driver-info1">Today at 3pm</div>
+          <div className="driver-info2">Driver #5625</div>
+          <div className="star-counter-wrapper">
+            <StarCounter setIsRated={setIsRated} />
+          </div>
+        </>
+      )}
     </div>
   );
 }
