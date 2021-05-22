@@ -4,19 +4,57 @@ import "../styles/BodyInfo.css";
 
 const BodyInfo = () => {
   const [bodyInfoArr, setBodyInfoArr] = useState([
-    { id: 1, content: "Motion Sickness", selected: false },
-    { id: 2, content: "Mental Illness", selected: true },
-    { id: 3, content: "Disabled Arms", selected: false },
-    { id: 4, content: "Disabled Legs", selected: false },
-    { id: 5, content: "Pregnancy", selected: true },
-    { id: 6, content: "Ear Problems", selected: false },
-    { id: 7, content: "Etc", selected: false },
-    { id: 8, content: "Etc", selected: false },
-    { id: 9, content: "Etc", selected: false },
-    { id: 10, content: "Etc", selected: false },
+    {
+      id: 1,
+      content: "Motion Sickness",
+      selected: false,
+      src: require("../assets/image.png"),
+    },
+    {
+      id: 2,
+      content: "Mental Illness",
+      selected: true,
+      src: require("../assets/image(1).png"),
+    },
+    {
+      id: 3,
+      content: "Disabled Arms",
+      selected: false,
+      src: require("../assets/image(2).png"),
+    },
+    {
+      id: 4,
+      content: "Disabled Legs",
+      selected: false,
+      src: require("../assets/image(3).png"),
+    },
+    {
+      id: 5,
+      content: "Pregnancy",
+      selected: true,
+      src: require("../assets/image(4).png"),
+    },
+    {
+      id: 6,
+      content: "Ear Problems",
+      selected: false,
+      src: require("../assets/image(5).png"),
+    },
+    {
+      id: 7,
+      content: "Patient",
+      selected: false,
+      src: require("../assets/image(6).png"),
+    },
+    {
+      id: 8,
+      content: "With Baby",
+      selected: false,
+      src: require("../assets/image(7).png"),
+    },
   ]);
 
-  const onClick = (id) => {
+  const onClick = ({ id, src }) => {
     setBodyInfoArr(
       bodyInfoArr.map((singleInfo) =>
         singleInfo.id === id
@@ -24,6 +62,7 @@ const BodyInfo = () => {
           : singleInfo
       )
     );
+    console.log(src);
   };
 
   return (
@@ -47,9 +86,10 @@ const BodyInfo = () => {
                   ? "single-body-info-selected"
                   : "single-body-info"
               }
-              onClick={() => onClick(singleInfo.id)}
+              onClick={() => onClick(singleInfo)}
               key={singleInfo.id}
             >
+              <img src={singleInfo.src.default} alt="" />
               {singleInfo.content}
               {singleInfo.selected ? (
                 <svg
