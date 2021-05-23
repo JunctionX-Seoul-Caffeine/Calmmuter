@@ -7,10 +7,7 @@ import "../styles/StatusBar.css";
 const LoadingComp = ({ stage, setStage }) => {
   return (
     <>
-      <div
-        className="match-grad-wrapper"
-        onClick={() => setStage((stage) => setStage(stage + 1))}
-      >
+      <div className="match-grad-wrapper">
         <div className="match-loading-message">
           Finding the right driver just for you!
         </div>
@@ -65,8 +62,17 @@ function MatchPage() {
         return <SelectComp stage={stage} setStage={setStage} />;
       case 2:
         return <FinalComp />;
+      default:
+        return null;
     }
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      setStage(1);
+    }, 1500);
+  }, []);
+
   return (
     <>
       <div className="match-statusbar-wrapper">

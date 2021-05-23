@@ -20,11 +20,14 @@
 .match-grad-wrapper {
   width: 100%;
   height: 487px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 35.42%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 35.42%
+  );
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  cursor: pointer;
 }
 
 button {
@@ -42,22 +45,15 @@ button {
 .match-loading-message {
   width: 184px;
   height: 44px;
-
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
-  /* or 122% */
-
   display: flex;
   align-items: center;
   text-align: center;
-
-  /* Main */
-
   color: #767cea;
-
   margin-bottom: 36px;
 }
 
@@ -79,7 +75,6 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
-
   color: #ffffff;
 }
 
