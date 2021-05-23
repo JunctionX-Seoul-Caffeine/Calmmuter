@@ -74,6 +74,30 @@
   margin-left: 15px;
 }
 
+.main-page-press-enter {
+  display: flex;
+  position: absolute;
+  width: 110px;
+  height: 35px;
+  left: 58px;
+  top: 163px;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  border: none;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  box-shadow: 0px 4px 8px rgba(75, 75, 75, 0.08);
+}
+
 .searchbar {
   margin-left: 7px;
   width: 70%;
