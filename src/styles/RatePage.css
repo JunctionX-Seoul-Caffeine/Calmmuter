@@ -418,6 +418,7 @@ input:focus {
 .tip-button {
   display: flex;
   flex-direction: row;
+  cursor: pointer;
   align-items: flex-start;
   justify-content: center;
   padding: 8px 23px;
