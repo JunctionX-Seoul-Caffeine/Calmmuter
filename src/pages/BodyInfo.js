@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import StatusBar from "../components/StatusBar";
 import "../styles/BodyInfo.css";
+import { Link } from "react-router-dom";
 
 const BodyInfo = () => {
   const [bodyInfoArr, setBodyInfoArr] = useState([
@@ -65,9 +66,9 @@ const BodyInfo = () => {
   };
 
   return (
-    <>
+    <div className="body-info-wrapper">
       <StatusBar />
-      <div className="body-info-wrapper">
+      <div className="body-info-main-wrapper">
         <div className="step-wrapper">
           <div className="step-bar">
             <div className="current-step"></div>
@@ -109,11 +110,15 @@ const BodyInfo = () => {
           ))}
         </div>
         <div className="button-wrapper">
-          <button>Back</button>
-          <button>Next</button>
+          <Link to="/ask-body-info">
+            <button>Back</button>
+          </Link>
+          <Link to="/priority">
+            <button>Next</button>
+          </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

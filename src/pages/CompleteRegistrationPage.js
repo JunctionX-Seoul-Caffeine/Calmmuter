@@ -2,6 +2,7 @@ import React from "react";
 import StatusBar from "../components/StatusBar";
 import "../styles/CompleteRegistrationPage.css";
 import "../styles/StatusBar.css";
+import { Link } from "react-router-dom";
 
 const CompleteRegistrationPage = () => {
   return (
@@ -256,7 +257,9 @@ const CompleteRegistrationPage = () => {
         </svg>
       </div>
       <div className="complete-registration-page-start-button">
-        <button>OK!</button>
+        <Link to="/main">
+          <button>OK!</button>
+        </Link>
       </div>
     </div>
   );
