@@ -20,14 +20,15 @@
 .match-grad-wrapper {
   width: 100%;
   height: 487px;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0) 0%,
-    #ffffff 35.42%
-  );
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 35.42%);
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
 }
 
 .match-loading-image {
@@ -94,6 +95,7 @@
 .match-driver-card {
   min-width: 207px;
   height: 316px;
+  cursor: pointer;
 }
 
 .driver1 {
@@ -133,6 +135,7 @@
   background-size: 80% 80%;
   background-position: center center;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .match-page-wrapperchange-image {
