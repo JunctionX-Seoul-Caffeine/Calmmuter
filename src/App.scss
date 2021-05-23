@@ -49,7 +49,7 @@ $timing: 200ms;
   }
 
   &.done {
-    position: relative !important;
+    position: absolute !important;
     transform: none !important;
   }
 }

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import StatusBar from "../components/StatusBar";
 import "../styles/MatchPage.css";
 import "../styles/StatusBar.css";
@@ -6,8 +7,13 @@ import "../styles/StatusBar.css";
 const LoadingComp = ({ stage, setStage }) => {
   return (
     <>
-      <div className="match-grad-wrapper" onClick={() => setStage((stage) => setStage(stage + 1))}>
-        <div className="match-loading-message">Finding the right driver just for you!</div>
+      <div
+        className="match-grad-wrapper"
+        onClick={() => setStage((stage) => setStage(stage + 1))}
+      >
+        <div className="match-loading-message">
+          Finding the right driver just for you!
+        </div>
         <div className="match-loading-image"></div>
       </div>
     </>
@@ -19,11 +25,17 @@ const SelectComp = ({ stage, setStage }) => {
     <>
       <div className="match-select-wrapper">
         <div className="request-drive-button-wrapper">
-          <button className="match-button-text" onClick={() => setStage((stage) => setStage(stage + 1))}>
+          <button
+            className="match-button-text"
+            onClick={() => setStage((stage) => setStage(stage + 1))}
+          >
             Request the AI’s best choice
           </button>
         </div>
-        <div className="match-swipe-wrapper" onClick={() => setStage((stage) => setStage(stage + 1))}>
+        <div
+          className="match-swipe-wrapper"
+          onClick={() => setStage((stage) => setStage(stage + 1))}
+        >
           <div className="match-driver-card driver1"></div>
           <div className="match-driver-card driver2"></div>
           <div className="match-driver-card driver1"></div>
@@ -36,9 +48,8 @@ const SelectComp = ({ stage, setStage }) => {
 const FinalComp = ({ stage, setStage }) => {
   return (
     <div className="match-final-wrapper">
-      // 여기 파이널 래퍼에 history.push 넣으세요.
       <div className="match-final-card"></div>
-      <div className="match-final-content"></div>
+      <Link to="/emergency" className="match-final-content"></Link>
     </div>
   );
 };
@@ -61,7 +72,9 @@ function MatchPage() {
       <div className="match-statusbar-wrapper">
         <StatusBar />
       </div>
-      <div className={`match-page-wrapper${stage === 2 && "change-image"}`}>{getPage(stage, setStage)}</div>
+      <div className={`match-page-wrapper${stage === 2 && "change-image"}`}>
+        {getPage(stage, setStage)}
+      </div>
     </>
   );
 }

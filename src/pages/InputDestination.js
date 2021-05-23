@@ -169,7 +169,7 @@ const InputDestination = ({
       </div>
       <div className="request-drive-button-wrapper">
         <button>
-          <Link to="/">Request A Drive</Link>
+          <Link to="/match">Request A Drive</Link>
         </button>
       </div>
     </div>
