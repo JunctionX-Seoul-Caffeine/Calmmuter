@@ -33,8 +33,14 @@ const SelectComp = ({ stage, setStage }) => {
   );
 };
 
-const FinalComp = () => {
-  return <></>;
+const FinalComp = ({ stage, setStage }) => {
+  return (
+    <div className="match-final-wrapper">
+      // 여기 파이널 래퍼에 history.push 넣으세요.
+      <div className="match-final-card"></div>
+      <div className="match-final-content"></div>
+    </div>
+  );
 };
 
 function MatchPage() {
@@ -55,7 +61,7 @@ function MatchPage() {
       <div className="match-statusbar-wrapper">
         <StatusBar />
       </div>
-      <div className="match-page-wrapper">{getPage(stage, setStage)}</div>
+      <div className={`match-page-wrapper${stage === 2 && "change-image"}`}>{getPage(stage, setStage)}</div>
     </>
   );
 }

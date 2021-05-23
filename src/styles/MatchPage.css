@@ -1,4 +1,4 @@
-.match-page-wrapper {
+.match-page-wrapperfalse {
   position: absolute;
   display: flex;
   flex-direction: column-reverse;
@@ -100,4 +100,39 @@
 .driver2 {
   background-image: url("../assets/driver_select_2.png");
   background-size: 100% 100%;
+}
+
+.match-final-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.match-final-card {
+  width: 375px;
+  height: 272px;
+  background: #ffffff;
+  box-shadow: 0px -8px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 0px 0px 32px 32px;
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.match-final-content {
+  position: absolute;
+  width: 375px;
+  height: 272px;
+  left: 0px;
+  top: 540px;
+  background-image: url("../assets/final-driver-card.png");
+  background-size: 80% 80%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.match-page-wrapperchange-image {
+  background-image: url("../assets/final_image.png");
+  width: 100%;
+  height: 100%;
 }
