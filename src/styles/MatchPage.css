@@ -30,6 +30,10 @@
   align-items: center;
 }
 
+button {
+  cursor: pointer;
+}
+
 .match-loading-image {
   background-image: url("../assets/load_car.png");
   background-size: 100% 100%;
@@ -41,22 +45,15 @@
 .match-loading-message {
   width: 184px;
   height: 44px;
-
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
-  /* or 122% */
-
   display: flex;
   align-items: center;
   text-align: center;
-
-  /* Main */
-
   color: #767cea;
-
   margin-bottom: 36px;
 }
 
@@ -78,7 +75,6 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-
   color: #ffffff;
 }
 
@@ -94,6 +90,7 @@
 .match-driver-card {
   min-width: 207px;
   height: 316px;
+  cursor: pointer;
 }
 
 .driver1 {
@@ -133,6 +130,7 @@
   background-size: 80% 80%;
   background-position: center center;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .match-page-wrapperchange-image {

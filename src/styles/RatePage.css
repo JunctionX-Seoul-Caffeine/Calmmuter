@@ -3,13 +3,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #c7cbd0;
+  background: url("../assets/dest_map.png") rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
   width: 100%;
   height: 100%;
 }
 
 .pop-up-card {
-  /* Rectangle 78 */
   position: relative;
   width: 335px;
   height: fit-content;
@@ -62,12 +62,8 @@
   font-weight: bold;
   font-size: 14px;
   line-height: 22px;
-  /* identical to box height, or 157% */
   margin-top: -10px;
   text-align: center;
-
-  /* Gray1 */
-
   color: #646b71;
 }
 
@@ -76,18 +72,12 @@
   margin-bottom: 26px;
   width: 248px;
   height: 44px;
-
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 19px;
   line-height: 22px;
-  /* or 116% */
-
   text-align: center;
-
-  /* Black */
-
   color: #333333;
 }
 
@@ -115,12 +105,7 @@
   font-weight: bold;
   font-size: 16px;
   line-height: 19px;
-  /* identical to box height */
-
   text-align: center;
-
-  /* Main */
-
   color: #767cea;
 }
 
@@ -130,25 +115,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   width: 285px;
   height: 48px;
   margin-bottom: 12px;
-
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-
-  /* Main */
-
   color: #767cea;
-
   background: rgba(255, 255, 255, 0.87);
-  /* Main */
-
   border: 1px solid #767cea;
   box-sizing: border-box;
   border-radius: 8px;
@@ -164,7 +141,6 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   width: 285px;
   height: 48px;
   font-family: Roboto;
@@ -172,14 +148,9 @@ button {
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
-  /* identical to box height */
-
   display: flex;
   align-items: center;
   text-align: center;
-
-  /* White */
-
   color: #ffffff;
 }
 
@@ -213,7 +184,7 @@ button {
   border-radius: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -223,14 +194,9 @@ button {
   font-weight: bold;
   font-size: 19px;
   line-height: 22px;
-  /* identical to box height, or 116% */
-
   text-align: center;
   margin-top: 68px;
   margin-bottom: 12px;
-
-  /* Black */
-
   color: #333333;
 }
 
@@ -242,8 +208,6 @@ button {
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  /* or 129% */
-
   display: flex;
   align-items: center;
   text-align: center;
@@ -256,7 +220,7 @@ button {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -276,11 +240,8 @@ button {
   font-weight: bold;
   font-size: 15px;
   line-height: 18px;
-  /* identical to box height */
   display: flex;
   align-items: center;
-  /* Black */
-
   color: #333333;
 }
 
@@ -289,8 +250,6 @@ button {
   top: 2px;
   left: 225px;
 }
-
-/* CSS rules are kept repetitive so that you can get CSS rules for each button easily :) */
 
 input {
   user-select: none;
@@ -362,7 +321,6 @@ input:focus {
   z-index: 1;
 }
 
-/* Button 10 */
 #button-10 .knobs:before,
 #button-10 .knobs:after,
 #button-10 .knobs span {
@@ -436,10 +394,6 @@ input:focus {
   font-weight: bold;
   font-size: 19px;
   line-height: 22px;
-  /* identical to box height, or 116% */
-
-  /* Black */
-
   color: #333333;
 }
 
@@ -449,10 +403,6 @@ input:focus {
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
-  /* identical to box height, or 137% */
-
-  /* Gray1 */
-
   color: #646b71;
 }
 
@@ -469,20 +419,41 @@ input:focus {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: center;
   padding: 8px 23px;
-
   width: 69px;
   height: 36px;
-
-  /* Gray3 */
-
   border: 1px solid #c7cbd0;
   box-sizing: border-box;
   border-radius: 20px;
 }
 
+.tip-able {
+  background: #767cea;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  /* identical to box height */
+
+  /* White */
+
+  color: #ffffff;
+}
+
 .tip-disable {
   background-color: #fff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  /* identical to box height */
+
+  /* Gray1 */
+
+  color: #646b71;
 }
 
 .second-tip-write-wrapper {
@@ -497,18 +468,12 @@ input:focus {
 .second-tip-write-wrapper > input:nth-child(1) {
   outline: none;
   border: none;
-
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 18px;
-  /* identical to box height */
-
   text-align: center;
-
-  /* Gray2 */
-
   color: #a2a4aa;
 }
 
