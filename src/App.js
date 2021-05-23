@@ -4,6 +4,7 @@ import "./App.css";
 import BodyInfo from "./pages/BodyInfo";
 import RatePage from "./pages/RatePage";
 import MainPage from "./pages/MainPage";
+import MatchPage from "./pages/MatchPage";
 import Priority from "./pages/Priority";
 import StartPage from "./pages/StartPage";
 import AskBodyInfoPage from "./pages/AskBodyInfoPage";
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
       <div className="wrapper">
         <Route path="/main" component={MainPage} exact />
+        <Route path="/match" component={MatchPage} exact />
         <Route path="/rate" component={RatePage} exact />
         <Route path="/body-info" component={BodyInfo} exact />
         <Route path="/priority" component={Priority} exact />
@@ -25,11 +27,7 @@ function App() {
         <Route path="/complete-registration" component={CompleteRegistrationPage} exact />
         <Route path="/your-detail" component={YourDetailPage} exact />
         <Route path="/basic-info" component={BasicInfo} exact />
-        <Route
-          path="/complete-registration"
-          component={CompleteRegistrationPage}
-          exact
-        />
+        <Route path="/complete-registration" component={CompleteRegistrationPage} exact />
         <Route path="/emergency" component={Emergency} exact />
       </div>
     </div>
