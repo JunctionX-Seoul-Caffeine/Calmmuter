@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.1f3a5049.chunk.css",
-    "main.js": "/static/js/main.92f3b4bc.chunk.js",
+    "main.css": "/static/css/main.3d56b0c9.chunk.css",
+    "main.js": "/static/js/main.3bbe15e5.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.593bcdb9.js",
-    "static/js/2.78dcac1d.chunk.js": "/static/js/2.78dcac1d.chunk.js",
+    "static/js/2.15c0c1e0.chunk.js": "/static/js/2.15c0c1e0.chunk.js",
     "static/js/3.c59fa4fd.chunk.js": "/static/js/3.c59fa4fd.chunk.js",
     "index.html": "/index.html",
-    "static/js/2.78dcac1d.chunk.js.LICENSE.txt": "/static/js/2.78dcac1d.chunk.js.LICENSE.txt",
+    "static/js/2.15c0c1e0.chunk.js.LICENSE.txt": "/static/js/2.15c0c1e0.chunk.js.LICENSE.txt",
     "static/media/MainPage.css": "/static/media/map_image.6d1a693f.png",
     "static/media/askbodyinfo_img.png": "/static/media/askbodyinfo_img.d4431792.png",
-    "static/media/MatchPage.css": "/static/media/load_car.18f2a257.png",
+    "static/media/Emergency.css": "/static/media/dest_map.4cb28236.png",
     "static/media/RatePage.css": "/static/media/end_rate.0b1f11b1.png",
+    "static/media/MatchPage.css": "/static/media/load_car.18f2a257.png",
     "static/media/image.png": "/static/media/image.04ef0416.png",
     "static/media/InputDestination.css": "/static/media/image11.f6326951.png",
     "static/media/roadmap.png": "/static/media/roadmap.a9d319b3.png"
   },
   "entrypoints": [
     "static/js/runtime-main.593bcdb9.js",
-    "static/js/2.78dcac1d.chunk.js",
-    "static/css/main.1f3a5049.chunk.css",
-    "static/js/main.92f3b4bc.chunk.js"
+    "static/js/2.15c0c1e0.chunk.js",
+    "static/css/main.3d56b0c9.chunk.css",
+    "static/js/main.3bbe15e5.chunk.js"
   ]
 }
