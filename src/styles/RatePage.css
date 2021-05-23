@@ -3,7 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #c7cbd0;
+  background: url("../assets/dest_map.png") rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
   width: 100%;
   height: 100%;
 }
