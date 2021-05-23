@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.scss";
 import BodyInfo from "./pages/BodyInfo";
 import RatePage from "./pages/RatePage";
@@ -13,6 +13,7 @@ import YourDetailPage from "./pages/YourDetailPage";
 import { Switch, Route, Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import InputDestination from "./pages/InputDestination";
 
 const history = createBrowserHistory();
 
@@ -30,6 +31,67 @@ const classNames = {
 };
 
 function App() {
+  const [destination, setDestination] = useState("");
+  const [infoArr, setInfoArr] = useState([
+    { content: "Speed" },
+    { content: "Rapid acceleration" },
+    { content: "Hard Barking" },
+    { content: "Traffic rules observance" },
+    { content: "Sharp turns" },
+    { content: "Quick lane change" },
+  ]);
+
+  const [bodyInfoArr, setBodyInfoArr] = useState([
+    {
+      id: 1,
+      content: "Motion Sickness",
+      selected: false,
+      src: require("./assets/image.png"),
+    },
+    {
+      id: 2,
+      content: "Mental Illness",
+      selected: true,
+      src: require("./assets/image(1).png"),
+    },
+    {
+      id: 3,
+      content: "Disabled Arms",
+      selected: false,
+      src: require("./assets/image(2).png"),
+    },
+    {
+      id: 4,
+      content: "Disabled Legs",
+      selected: false,
+      src: require("./assets/image(3).png"),
+    },
+    {
+      id: 5,
+      content: "Pregnancy",
+      selected: true,
+      src: require("./assets/image(4).png"),
+    },
+    {
+      id: 6,
+      content: "Ear Problems",
+      selected: false,
+      src: require("./assets/image(5).png"),
+    },
+    {
+      id: 7,
+      content: "Patient",
+      selected: false,
+      src: require("./assets/image(6).png"),
+    },
+    {
+      id: 8,
+      content: "With Baby",
+      selected: false,
+      src: require("./assets/image(7).png"),
+    },
+  ]);
+
   return (
     <div className="App">
       <div className="wrapper">
@@ -43,10 +105,31 @@ function App() {
                   timeout={200}
                 >
                   <Switch location={location}>
-                    <Route path="/main" component={MainPage} exact />
+                    <Route
+                      path="/main"
+                      render={() => (
+                        <MainPage setDestination={setDestination} />
+                      )}
+                      exact
+                    />
                     <Route path="/rate" component={RatePage} exact />
-                    <Route path="/body-info" component={BodyInfo} exact />
-                    <Route path="/priority" component={Priority} exact />
+                    <Route
+                      path="/body-info"
+                      render={() => (
+                        <BodyInfo
+                          bodyInfoArr={bodyInfoArr}
+                          setBodyInfoArr={setBodyInfoArr}
+                        />
+                      )}
+                      exact
+                    />
+                    <Route
+                      path="/priority"
+                      render={() => (
+                        <Priority infoArr={infoArr} setInfoArr={setInfoArr} />
+                      )}
+                      exact
+                    />
                     <Route path="/" component={StartPage} exact />
                     <Route
                       path="/ask-body-info"
@@ -65,6 +148,18 @@ function App() {
                       exact
                     />
                     <Route path="/emergency" component={Emergency} exact />
+                    <Route
+                      path="/input-destination"
+                      render={() => (
+                        <InputDestination
+                          destination={destination}
+                          infoArr={infoArr}
+                          setInfoArr={setInfoArr}
+                          bodyInfoArr={bodyInfoArr}
+                          setBodyInfoArr={setBodyInfoArr}
+                        />
+                      )}
+                    />
                   </Switch>
                 </CSSTransition>
               </TransitionGroup>

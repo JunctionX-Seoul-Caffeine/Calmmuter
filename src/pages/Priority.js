@@ -1,19 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDragListView from "react-drag-listview";
 import StatusBar from "../components/StatusBar";
 import "../styles/Priority.css";
 import { Link } from "react-router-dom";
 
-const Priority = () => {
-  const [infoArr, setInfoArr] = useState([
-    { content: "Speed" },
-    { content: "Rapid acceleration" },
-    { content: "Hard Barking" },
-    { content: "Traffic rules observance" },
-    { content: "Sharp turns" },
-    { content: "Quick lane change" },
-  ]);
-
+const Priority = ({ infoArr, setInfoArr }) => {
   const dragProps = {
     onDragEnd(fromIndex, toIndex) {
       const data = infoArr;
