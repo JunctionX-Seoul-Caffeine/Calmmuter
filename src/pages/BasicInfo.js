@@ -29,13 +29,13 @@ const BasicInfo = () => {
             <div className="gender-button-wrapper">
               <button
                 className={toggle ? "gender-unselected" : "gender-selected"}
-                onClick={() => setToggle(!toggle)}
+                onClick={toggle ? () => setToggle(!toggle) : null}
               >
                 Female
               </button>
               <button
                 className={toggle ? "gender-selected " : "gender-unselected"}
-                onClick={() => setToggle(!toggle)}
+                onClick={!toggle ? () => setToggle(!toggle) : null}
               >
                 Male
               </button>
