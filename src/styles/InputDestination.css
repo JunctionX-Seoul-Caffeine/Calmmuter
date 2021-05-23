@@ -1,6 +1,6 @@
 .input-location-dest-wrapper {
   position: absolute;
-  height: 191px;
+  height: 202px;
   width: 335px;
   left: 20px;
   top: 53px;
@@ -15,6 +15,7 @@
   display: flex;
   align-items: flex-end;
   width: 100%;
+  height: 32px;
   padding-left: 15px;
   margin-top: 10px;
   font-style: normal;
@@ -61,6 +62,7 @@
   display: flex;
   align-items: flex-end;
   width: 100%;
+  height: 32px;
   padding-left: 15px;
   margin-top: 10px;
   font-style: normal;
@@ -80,11 +82,12 @@
   width: 100%;
   align-items: center;
   margin-top: 15px;
+  display: flex;
 }
 
 .apply-condition-wrapper div {
   width: 75%;
-  height: 100%;
+  height: 32px;
   margin-left: 40px;
   font-family: Roboto;
   font-style: normal;
@@ -99,11 +102,12 @@
 
 .apply-condition-wrapper svg {
   cursor: pointer;
+  margin-right: 15px;
 }
 
 .input-location-dest-wrapper-not-toggle {
   position: absolute;
-  height: 600px;
+  height: 630px;
   width: 335px;
   left: 20px;
   top: 53px;
@@ -120,7 +124,7 @@
 
 .input-location-dest-wrapper-not-toggle div {
   display: flex;
-  height: 28.3px;
+  height: 32px;
 }
 
 .input-location-dest-wrapper-not-toggle div input {
@@ -173,7 +177,7 @@
 .reselect-body-info-element-wrapper {
   width: 91%;
   height: 20%;
-  margin: 12px auto 0;
+  margin: 40px auto 0;
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -232,6 +236,10 @@
   position: relative;
 }
 
+.drag-list-wrapper div {
+  height: 32px;
+}
+
 .reselect-priority-single-body-info {
   display: flex;
   height: 56px;
@@ -250,16 +258,45 @@
 
 .section-title-difficulties {
   width: 100%;
-  height: 25px;
-  margin: 0;
+  display: flex;
+  align-items: center;
+  height: 35px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 20px;
   position: absolute;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.5px;
+  color: #333333;
 }
 
 .section-title-priorities {
   width: 100%;
   height: 25px;
-  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 0;
   position: absolute;
-  top: -10px;
   left: 20px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.5px;
+  color: #333333;
+}
+
+.reselect-multi-body-info {
+  display: flex;
+  flex-direction: column;
+  height: 210px;
+  width: 100%;
+  padding: 0;
+  margin-top: 40px;
 }

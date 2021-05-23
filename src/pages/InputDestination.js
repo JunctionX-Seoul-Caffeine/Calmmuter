@@ -117,8 +117,8 @@ const InputDestination = ({
         </div>
         {!toggle ? (
           <>
+            <p className="section-title-difficulties">Difficulties</p>
             <section className="reselect-body-info-element-wrapper">
-              <p className="section-title-difficulties">Difficulties</p>
               {bodyInfoArr.map((singleInfo) => (
                 <div
                   className={
@@ -137,7 +137,7 @@ const InputDestination = ({
             <section className="drag-list-wrapper">
               <p className="section-title-priorities">Prioritize sensitivity</p>
               <ReactDragListView {...dragProps}>
-                <ol className="multi-body-info">
+                <ol className="reselect-multi-body-info">
                   {infoArr.map((singleInfo, i) => (
                     <li key={i} className="reselect-priority-single-body-info">
                       <div className="reselect-element-title-wrapper">
