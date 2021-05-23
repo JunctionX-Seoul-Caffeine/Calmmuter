@@ -1,6 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import "../styles/MainPage.css";
+import "../styles/StatusBar.css";
+import StatusBar from "../components/StatusBar";
 
 const MainPage = () => {
   const history = useHistory();
@@ -14,6 +16,7 @@ const MainPage = () => {
   return (
     <>
       <div className="map">
+        <StatusBar />
         <div className="user-avatar"></div>
         <h1 className="title">Ann, where to?</h1>
         <div className="searchbar-wrapper">

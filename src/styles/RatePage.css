@@ -18,6 +18,15 @@
   border-radius: 16px;
 }
 
+.rate-statusbar-wrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: fit-content;
+  z-index: 5;
+}
+
 .close-button-wrapper {
   position: absolute;
   width: 24px;

@@ -1,6 +1,8 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import "../styles/RatePage.css";
+import "../styles/StatusBar.css";
+import StatusBar from "../components/StatusBar";
 
 const Stars = ({ index, rating, hoverRating, onMouseEnter, onMouseLeave, onSaveRating }) => {
   const fillColor = useMemo(() => {
@@ -258,22 +260,27 @@ function RatePage() {
     }
   }
   return (
-    <div className="rate-page-wrapper">
-      <div className="pop-up-card">
-        {stage !== 3 && (
-          <div
-            className="close-button-wrapper"
-            onClick={() => {
-              history.push("/main");
-            }}
-          >
-            <CloseIcon />
-          </div>
-        )}
-        {getContentByState(stage, setStage, setModalOpened)}
+    <>
+      <div className="rate-statusbar-wrapper">
+        <StatusBar />
       </div>
-      {modalOpened && <DetailRideModal setModalOpened={setModalOpened} />}
-    </div>
+      <div className="rate-page-wrapper">
+        <div className="pop-up-card">
+          {stage !== 3 && (
+            <div
+              className="close-button-wrapper"
+              onClick={() => {
+                history.push("/main");
+              }}
+            >
+              <CloseIcon />
+            </div>
+          )}
+          {getContentByState(stage, setStage, setModalOpened)}
+        </div>
+        {modalOpened && <DetailRideModal setModalOpened={setModalOpened} />}
+      </div>
+    </>
   );
 }
 
