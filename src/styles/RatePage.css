@@ -470,6 +470,7 @@ input:focus {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: center;
   padding: 8px 23px;
 
   width: 69px;
@@ -482,8 +483,32 @@ input:focus {
   border-radius: 20px;
 }
 
+.tip-able {
+  background: #767cea;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  /* identical to box height */
+
+  /* White */
+
+  color: #ffffff;
+}
+
 .tip-disable {
   background-color: #fff;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  /* identical to box height */
+
+  /* Gray1 */
+
+  color: #646b71;
 }
 
 .second-tip-write-wrapper {
