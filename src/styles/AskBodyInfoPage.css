@@ -46,7 +46,11 @@
   justify-content: space-between;
   width: 91%;
   height: 9%;
-  margin: 0 auto;
+  margin: 26px auto 0;
+}
+
+.ask-body-info-page-start-button a {
+  height: 70%;
 }
 
 .ask-body-info-page-start-button button {

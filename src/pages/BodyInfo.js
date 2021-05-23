@@ -110,7 +110,9 @@ const BodyInfo = () => {
           ))}
         </div>
         <div className="button-wrapper">
-          <button>Back</button>
+          <Link to="/ask-body-info">
+            <button>Back</button>
+          </Link>
           <Link to="/priority">
             <button>Next</button>
           </Link>

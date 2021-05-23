@@ -6,7 +6,6 @@
 
 .start-page-main-title {
   margin: 93px 0 0 22px;
-
   font-family: Roboto;
   font-style: normal;
   font-weight: 900;
@@ -19,7 +18,7 @@
 }
 
 .start-page-illustrator {
-  margin: 114px 0 170px 0;
+  margin: 114px 0 220px 0;
   display: flex;
   justify-content: center;
 }
@@ -29,7 +28,7 @@
   align-items: center;
   justify-content: space-between;
   width: 91%;
-  height: 13%;
+  height: 48px;
   margin: 0 auto;
 }
 

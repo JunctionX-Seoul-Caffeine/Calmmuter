@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactDragListView from "react-drag-listview";
 import StatusBar from "../components/StatusBar";
 import "../styles/Priority.css";
+import { Link } from "react-router-dom";
 
 const Priority = () => {
   const [infoArr, setInfoArr] = useState([
@@ -79,8 +80,12 @@ const Priority = () => {
           </ReactDragListView>
         </div>
         <div className="priority-button-wrapper">
-          <button>Back</button>
-          <button>Next</button>
+          <Link to="/body-info">
+            <button>Back</button>
+          </Link>
+          <Link to="/complete-registration">
+            <button>Next</button>
+          </Link>
         </div>
       </div>
     </div>

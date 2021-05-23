@@ -80,6 +80,11 @@
   margin: 0 auto;
 }
 
+.priority-button-wrapper a {
+  width: 48%;
+  height: 50%;
+}
+
 .priority-button-wrapper button {
   width: 163px;
   height: 48px;
@@ -90,7 +95,7 @@
   align-items: center;
 }
 
-.priority-button-wrapper button:first-child {
+.priority-button-wrapper a:first-child button {
   background: #f3f5f7;
   border: 1px solid #e3e6ea;
   box-sizing: border-box;
@@ -102,7 +107,7 @@
   cursor: pointer;
 }
 
-.priority-button-wrapper button:nth-last-child(1) {
+.priority-button-wrapper a:nth-last-child(1) button {
   background: #767cea;
   border-radius: 8px;
   outline: none;

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import StatusBar from "../components/StatusBar";
 import "../styles/BasicInfo.css";
+import { Link } from "react-router-dom";
 
 const BasicInfo = () => {
   const [toggle, setToggle] = useState(true);
 
   return (
-    <>
+    <div className="basic-info-wrapper">
       <StatusBar />
       <div className="basic-info-body-wrapper">
         <div className="step-wrapper">
@@ -42,11 +43,15 @@ const BasicInfo = () => {
           </div>
         </div>
         <div className="button-wrapper">
-          <button>Back</button>
-          <button>Next</button>
+          <Link to="/">
+            <button>Back</button>
+          </Link>
+          <Link to="/ask-body-info">
+            <button>Next</button>
+          </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
