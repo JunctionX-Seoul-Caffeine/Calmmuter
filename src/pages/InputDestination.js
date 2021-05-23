@@ -41,7 +41,7 @@ const InputDestination = ({
   };
 
   return (
-    <div className="map">
+    <div className="dest-map">
       <StatusBar />
       <div
         className={
