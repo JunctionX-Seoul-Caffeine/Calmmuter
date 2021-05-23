@@ -1,12 +1,12 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "../styles/MainPage.css";
 import StatusBar from "../components/StatusBar";
 
-const MainPage = ({ setDestination }) => {
+const MainPage = ({ setDestination, username }) => {
   const history = useHistory();
 
-  const [pressEneter, setPressEnter] = useState(false);
+  const [pressEnter, setPressEnter] = useState(false);
 
   const handleKeyPress = (e) => {
     setPressEnter(true);
@@ -20,7 +20,7 @@ const MainPage = ({ setDestination }) => {
       <div className="map">
         <StatusBar />
         <div className="user-avatar"></div>
-        <h1 className="title">Ann, where to?</h1>
+        <h1 className="title">{username}, where to?</h1>
         <div className="searchbar-wrapper">
           <DirectionIcon />
           <input
@@ -38,15 +38,13 @@ const MainPage = ({ setDestination }) => {
         <CarA3 idx={1} />
         <CarA3 idx={2} />
         <CarA3 idx={3} />
-        {pressEneter && (
-          <div className="main-page-press-enter">
-            Press Enter!
-          </div>
+        {pressEnter && (
+          <div className="main-page-press-enter">Press Enter!</div>
         )}
       </div>
     </>
   );
-}
+};
 
 export default MainPage;
 

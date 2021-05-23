@@ -3,7 +3,7 @@ import StatusBar from "../components/StatusBar";
 import "../styles/BasicInfo.css";
 import { Link } from "react-router-dom";
 
-const BasicInfo = () => {
+const BasicInfo = ({ setUsername }) => {
   const [toggle, setToggle] = useState(true);
 
   return (
@@ -18,7 +18,10 @@ const BasicInfo = () => {
         <div className="basic-info-inputs-wrapper">
           <div className="basic-info-name-wrapper">
             <h3>Name</h3>
-            <input placeholder="Enter your given name"></input>
+            <input
+              placeholder="Enter your given name"
+              onChange={(e) => setUsername(e.target.value)}
+            ></input>
           </div>
           <div className="basic-info-age-wrapper">
             <h3>Age</h3>

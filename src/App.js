@@ -93,6 +93,8 @@ function App() {
     },
   ]);
 
+  const [username, setUsername] = useState("Ann");
+
   return (
     <div className="App">
       <div className="wrapper">
@@ -100,12 +102,19 @@ function App() {
           <Route
             render={({ location }) => (
               <TransitionGroup className="transitionGroup">
-                <CSSTransition key={location.pathname} classNames={classNames} timeout={200}>
+                <CSSTransition
+                  key={location.pathname}
+                  classNames={classNames}
+                  timeout={200}
+                >
                   <Switch location={location}>
                     <Route
                       path="/main"
                       render={() => (
-                        <MainPage setDestination={setDestination} />
+                        <MainPage
+                          setDestination={setDestination}
+                          username={username}
+                        />
                       )}
                       exact
                     />
@@ -128,10 +137,26 @@ function App() {
                       exact
                     />
                     <Route path="/" component={StartPage} exact />
-                    <Route path="/ask-body-info" component={AskBodyInfoPage} exact />
-                    <Route path="/your-detail" component={YourDetailPage} exact />
-                    <Route path="/basic-info" component={BasicInfo} exact />
-                    <Route path="/complete-registration" component={CompleteRegistrationPage} exact />
+                    <Route
+                      path="/ask-body-info"
+                      component={AskBodyInfoPage}
+                      exact
+                    />
+                    <Route
+                      path="/your-detail"
+                      component={YourDetailPage}
+                      exact
+                    />
+                    <Route
+                      path="/basic-info"
+                      render={() => <BasicInfo setUsername={setUsername} />}
+                      exact
+                    />
+                    <Route
+                      path="/complete-registration"
+                      component={CompleteRegistrationPage}
+                      exact
+                    />
                     <Route path="/emergency" component={Emergency} exact />
                     <Route
                       path="/input-destination"
