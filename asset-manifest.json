@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.b777c5bc.chunk.css",
-    "main.js": "/static/js/main.80716e3c.chunk.js",
-    "runtime-main.js": "/static/js/runtime-main.47736032.js",
-    "static/js/2.3c306ff5.chunk.js": "/static/js/2.3c306ff5.chunk.js",
-    "static/js/3.45c40e77.chunk.js": "/static/js/3.45c40e77.chunk.js",
+    "main.css": "/static/css/main.46d5e9d4.chunk.css",
+    "main.js": "/static/js/main.fc5d785a.chunk.js",
+    "runtime-main.js": "/static/js/runtime-main.593bcdb9.js",
+    "static/js/2.78dcac1d.chunk.js": "/static/js/2.78dcac1d.chunk.js",
+    "static/js/3.c59fa4fd.chunk.js": "/static/js/3.c59fa4fd.chunk.js",
     "index.html": "/index.html",
-    "static/js/2.3c306ff5.chunk.js.LICENSE.txt": "/static/js/2.3c306ff5.chunk.js.LICENSE.txt",
+    "static/js/2.78dcac1d.chunk.js.LICENSE.txt": "/static/js/2.78dcac1d.chunk.js.LICENSE.txt",
     "static/media/MainPage.css": "/static/media/map_image.6d1a693f.png",
     "static/media/askbodyinfo_img.png": "/static/media/askbodyinfo_img.d4431792.png",
+    "static/media/MatchPage.css": "/static/media/load_car.18f2a257.png",
     "static/media/RatePage.css": "/static/media/end_rate.0b1f11b1.png",
     "static/media/image.png": "/static/media/image.04ef0416.png",
     "static/media/roadmap.png": "/static/media/roadmap.a9d319b3.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.47736032.js",
-    "static/js/2.3c306ff5.chunk.js",
-    "static/css/main.b777c5bc.chunk.css",
-    "static/js/main.80716e3c.chunk.js"
+    "static/js/runtime-main.593bcdb9.js",
+    "static/js/2.78dcac1d.chunk.js",
+    "static/css/main.46d5e9d4.chunk.css",
+    "static/js/main.fc5d785a.chunk.js"
   ]
 }
