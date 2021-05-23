@@ -7,8 +7,13 @@ const YourDetailPage = () => {
     return (
         <div className="your-detail-page-wrapper">
             <StatusBar />
-            <div className="your-detail-page-title">
-                Your Ride Summary
+            <div className="your-detail-page-title-wrapper">
+                <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5098 3.8701L15.7298 2.1001L5.83984 12.0001L15.7398 21.9001L17.5098 20.1301L9.37984 12.0001L17.5098 3.8701V3.8701Z" fill="#323232"/>
+                </svg>
+                <div className="your-detail-page-title">
+                    Your Ride Summary
+                </div>
             </div>
             <div className="your-detail-page-upper-wrapper">
                 <img className="your-detail-page-roadmap" src={require('../assets/roadmap.png').default} alt="" />

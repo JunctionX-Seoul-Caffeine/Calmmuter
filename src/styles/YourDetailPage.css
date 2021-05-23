@@ -5,11 +5,16 @@
     flex-direction: column;
 }
 
-.your-detail-page-title {
-
+.your-detail-page-title-wrapper {
+    display: flex;
+    flex-direction: row;
     height: 30px;
     margin: 13px 0 0 22px;
+}
 
+.your-detail-page-title {
+
+    margin-left: 11px;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
