@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.3339fdb4.chunk.css",
-    "main.js": "/static/js/main.a3e1253e.chunk.js",
-    "runtime-main.js": "/static/js/runtime-main.30f570bb.js",
-    "static/js/2.dac9334b.chunk.js": "/static/js/2.dac9334b.chunk.js",
-    "static/js/3.b70b5b9c.chunk.js": "/static/js/3.b70b5b9c.chunk.js",
+    "main.css": "/static/css/main.fe44569a.chunk.css",
+    "main.js": "/static/js/main.2017a56f.chunk.js",
+    "runtime-main.js": "/static/js/runtime-main.7679bb16.js",
+    "static/js/2.6a0b2ad6.chunk.js": "/static/js/2.6a0b2ad6.chunk.js",
+    "static/js/3.aca44938.chunk.js": "/static/js/3.aca44938.chunk.js",
     "index.html": "/index.html",
-    "static/js/2.dac9334b.chunk.js.LICENSE.txt": "/static/js/2.dac9334b.chunk.js.LICENSE.txt",
+    "static/js/2.6a0b2ad6.chunk.js.LICENSE.txt": "/static/js/2.6a0b2ad6.chunk.js.LICENSE.txt",
     "static/media/MainPage.css": "/static/media/map_image.6d1a693f.png",
     "static/media/askbodyinfo_img.png": "/static/media/askbodyinfo_img.d4431792.png",
-    "static/media/RatePage.css": "/static/media/driver_rate.35bdaafa.png",
+    "static/media/RatePage.css": "/static/media/end_rate.0b1f11b1.png",
     "static/media/image.png": "/static/media/image.04ef0416.png",
     "static/media/roadmap.png": "/static/media/roadmap.a9d319b3.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.30f570bb.js",
-    "static/js/2.dac9334b.chunk.js",
-    "static/css/main.3339fdb4.chunk.css",
-    "static/js/main.a3e1253e.chunk.js"
+    "static/js/runtime-main.7679bb16.js",
+    "static/js/2.6a0b2ad6.chunk.js",
+    "static/css/main.fe44569a.chunk.css",
+    "static/js/main.2017a56f.chunk.js"
   ]
 }
