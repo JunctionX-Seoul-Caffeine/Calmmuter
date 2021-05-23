@@ -1,0 +1,67 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #535c68;
+}
+
+.wrapper {
+  width: 375px;
+  height: 812px;
+  background-color: white;
+  position: relative;
+}
+
+.transitionGroup {
+  width: 100%;
+  height: 100%;
+}
+
+$timing: 200ms;
+
+.trans {
+  transition: $timing;
+  transition-timing-function: ease;
+
+  &.enter {
+    z-index: 10;
+    opacity: 0;
+
+    &.active,
+    &.done {
+      opacity: 1;
+    }
+  }
+
+  &.exit {
+    z-index: 9;
+
+    &.active,
+    &.done {
+      opacity: 0;
+    }
+  }
+
+  &.active {
+    position: absolute;
+  }
+
+  &.done {
+    position: relative !important;
+    transform: none !important;
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #fff;
+}

@@ -31,7 +31,7 @@ const Priority = () => {
   };
 
   return (
-    <>
+    <div className="priority-wrapper">
       <StatusBar />
       <div className="priority-body-wrapper">
         <div className="step-wrapper">
@@ -83,7 +83,7 @@ const Priority = () => {
           <button>Next</button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
