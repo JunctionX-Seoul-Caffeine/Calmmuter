@@ -1,60 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import StatusBar from "../components/StatusBar";
 import "../styles/BodyInfo.css";
 import { Link } from "react-router-dom";
 
-const BodyInfo = () => {
-  const [bodyInfoArr, setBodyInfoArr] = useState([
-    {
-      id: 1,
-      content: "Motion Sickness",
-      selected: false,
-      src: require("../assets/image.png"),
-    },
-    {
-      id: 2,
-      content: "Mental Illness",
-      selected: true,
-      src: require("../assets/image(1).png"),
-    },
-    {
-      id: 3,
-      content: "Disabled Arms",
-      selected: false,
-      src: require("../assets/image(2).png"),
-    },
-    {
-      id: 4,
-      content: "Disabled Legs",
-      selected: false,
-      src: require("../assets/image(3).png"),
-    },
-    {
-      id: 5,
-      content: "Pregnancy",
-      selected: true,
-      src: require("../assets/image(4).png"),
-    },
-    {
-      id: 6,
-      content: "Ear Problems",
-      selected: false,
-      src: require("../assets/image(5).png"),
-    },
-    {
-      id: 7,
-      content: "Patient",
-      selected: false,
-      src: require("../assets/image(6).png"),
-    },
-    {
-      id: 8,
-      content: "With Baby",
-      selected: false,
-      src: require("../assets/image(7).png"),
-    },
-  ]);
-
+const BodyInfo = ({ bodyInfoArr, setBodyInfoArr }) => {
   const onClick = ({ id }) => {
     setBodyInfoArr(
       bodyInfoArr.map((singleInfo) =>
