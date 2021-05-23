@@ -22,7 +22,6 @@ function App() {
         <Route path="/priority" component={Priority} exact />
         <Route path="/" component={StartPage} exact />
         <Route path="/ask-body-info" component={AskBodyInfoPage} exact />
-        <Route path="/complete-registration" component={CompleteRegistrationPage} exact />
         <Route path="/your-detail" component={YourDetailPage} exact />
         <Route path="/basic-info" component={BasicInfo} exact />
         <Route
