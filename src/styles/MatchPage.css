@@ -55,3 +55,49 @@
 
   margin-bottom: 36px;
 }
+
+.match-select-wrapper {
+  width: 100%;
+  height: 487px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.match-button-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.match-swipe-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 80px;
+}
+
+.match-driver-card {
+  min-width: 207px;
+  height: 316px;
+}
+
+.driver1 {
+  background-image: url("../assets/driver_select_1.png");
+  background-size: 100% 100%;
+}
+
+.driver2 {
+  background-image: url("../assets/driver_select_2.png");
+  background-size: 100% 100%;
+}
